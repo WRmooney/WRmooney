@@ -64,8 +64,22 @@ body {
     opacity: 1;
 }
 
-::-webkit-scrollbar {
-  display:none;
+a {
+    text-decoration: none;
+    color: inherit; /* Optional: makes link color match parent */
+}
+
+html, body {
+    overflow: auto;
+    margin: 0;
+    padding: 0;
+    /* Hide scrollbars for most browsers */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+}
+
+body::-webkit-scrollbar, html::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
 }
 
 #title {
@@ -80,6 +94,26 @@ body {
     color: #aaaaaa;
     
     /* animation: Fadein 1s ease-in forwards; */
+}
+
+.titlehover {
+    font-size: 80px;
+    text-align: center;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width:100vw;
+    height: 200px;
+    top: 0px;
+    color: #aaaaaa;
+    transition: color 0.7s, ease;
+    
+    /* animation: Fadein 1s ease-in forwards; */
+}
+
+.titlehover:hover {
+    color: #dddddd;
+    cursor: pointer;
 }
 
 #description {
